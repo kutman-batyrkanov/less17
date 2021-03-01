@@ -20,4 +20,19 @@ document.querySelector("#example-3 input").addEventListener("input", function ()
     document.querySelector("#example-3 h1").innerText = "Your name is";
   });
 
+  let text = "";
+  let text1 = document.querySelector('#text-1');
+  let text2 = document.querySelector('#text-2');
+  text1.addEventListener('input', function() {
+      text = value.trim();
+      text1.value = text;
+      text2.value = text;
+  });
+
+  text2.addEventListener('input', function() {
+      text = this.value.trim();
+      text1.value = text;
+      text2.value = text;
+  });
+
 
